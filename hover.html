@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Hover</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready( function() {
+
+        $('img').hover(function(){
+            var replace = $(this).attr('data-alt-src');
+
+            var attre = $(this).attr('src', replace);
+			}, function(){
+            
+                $( "this" ).off( "mouseenter mouseleave" );
+                var retrn = $(this).attr('src');
+                var replc = $(this).attr('data-alt-src', retrn);
+                
+        
+			});
+    });
+</script>
+<style>
+    img {
+     width: 200px;
+    
+    }
+    
+    </style>
+</head>
+<body>
+    <h1>Hover In / Out</h1>
+    <img class="me-img" src="img/cat1.jpg" data-alt-src='img/cat2.png'/>
+    <img class="me-img" src="img/cat1.jpg" data-alt-src='img/cat2.png'/>
+    <img class="me-img" src="img/cat1.jpg" data-alt-src='img/cat2.png'/>
+    <img class="me-img" src="img/cat1.jpg" data-alt-src='img/cat2.png'/>
+    <img class="me-img" src="img/cat1.jpg" data-alt-src='img/cat2.png'/>
+    
+    
+
+    
+</body>
+</html>
